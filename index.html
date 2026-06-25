@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="info">
+    <div id="close">X</div>
+    <div id="infoone">
+      <div id="infooneone">Auto Update</div>
+      <hr>
+      <p id="infooneoneone">Auto update make the word counter auto updates when any changes make.</p>
+    </div>
+  </div>
+  <div id="inputarea">
+    <textarea id="input" placeholder="Enter text" oninput="checktext()"></textarea>
+  </div>
+  <div>
+  <label for="autoupdate" id="autoupdatelabel" class="right">
+    Auto Update
+    <input type="checkbox" id="autoupdate" onchange="checkbox()">
+  </label><br><br>
+  <label for="countpunctuationmarks" id="countpm" class="right">
+    Count Punctuation Marks
+    <input type="checkbox" id="countpunctuationmarks" onchange="countPM()">
+  </label>
+  </div>
+  <div>
+    <input type="submit" value="Count words" id="count">
+    <p id="wordcount"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
