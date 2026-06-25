@@ -1,0 +1,118 @@
+body {
+  background-color: #999;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+}
+#info {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  inset: 0;
+  opacity: 0;
+  transition: opacity 3s ease;
+  pointer-events: none;
+  z-index: 999;
+}
+#info.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+#infoone {
+  position: fixed;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#close {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 39px;
+  color: #FFB480;
+  font-family: Arial;
+}
+#close:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#close:active {
+  color: #ffff00;
+  transform: scale(1);
+}
+#infooneone {
+  font-size: 39px;
+  color: #F4A261;
+  margin: 10px;
+}
+#infooneoneone {
+  font-size: 33px;
+  color: #E9A178;
+  text-shadow: 0px 0px 1px #00ffff;
+}
+textarea {
+  height: 97.7vh;
+  width: 57.7vw;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  font-size: 39px;
+  border: 1px solid #ffff00;
+  padding: 10px;
+}
+#autoupdatelabel, #countpm {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #E0E0E0;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+#autoupdate, #countpunctuationmarks {
+  float: right;
+  margin: 20px;
+  scale: 2.1;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+#autoupdate:checked::after,
+#countpunctuationmarks:checked::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.right {
+  position: fixed;
+  right: 10px;
+}
+#count {
+  height: 30px;
+  width: auto;
+  font-size: 19px;
+  margin-top: 39px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#wordcount {
+  font-size: 23px;
+}
