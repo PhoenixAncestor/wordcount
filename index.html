@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="word counter, english chinese word count">
+    <meta name="description" content="This is a word counter website, for Chinese and English only.">
+    <meta name="author" content="Phoenix Ancestor">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="info">
+<div id="info">
     <div id="close">X</div>
     <div id="infoone">
-      <div id="infooneone">Auto Update</div>
-      <hr>
-      <p id="infooneoneone">Auto update make the word counter auto updates when any changes make.</p>
+        <div id="infooneone">Auto Update</div>
+        <hr>
+        <p id="infooneoneone">
+            Auto update makes the word counter automatically update whenever the text changes.
+        </p>
     </div>
-  </div>
-  <div id="inputarea">
-    <textarea id="input" placeholder="Enter text" oninput="checktext()"></textarea>
-  </div>
-  <div>
-  <label for="autoupdate" id="autoupdatelabel" class="right">
-    Auto Update
-    <input type="checkbox" id="autoupdate" onchange="checkbox()">
-  </label><br><br>
-  <label for="countpunctuationmarks" id="countpm" class="right">
-    Count Punctuation Marks
-    <input type="checkbox" id="countpunctuationmarks" onchange="countPM()">
-  </label>
-  </div>
-  <div>
-    <input type="submit" value="Count words" id="count">
-    <p id="wordcount"></p>
-  </div>
-  <script src="script.js"></script>
+</div>
+<div id="container">
+    <div id="inputarea">
+        <textarea id="input" placeholder="Enter text" oninput="checktext()"></textarea>
+    </div>
+    <div id="controls">
+        <label for="autoupdate" id="autoupdatelabel">
+            Auto Update
+            <input type="checkbox" id="autoupdate">
+        </label>
+        <label for="countpunctuationmarks" id="countpm">
+            Count Punctuation Marks
+            <input type="checkbox" id="countpunctuationmarks">
+        </label>
+        <input type="submit" value="Count Words" id="count">
+        <p id="wordcount"></p>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
